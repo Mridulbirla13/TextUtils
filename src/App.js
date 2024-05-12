@@ -1,9 +1,9 @@
-// import About from './components/About';
+import About from './components/About';
 import Alert from './components/Alert';
 import Navbar from './components/Navbar';
 import TextForm from './components/TextForm';
 import React, { useState } from 'react'
-// import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 
 function App() {
@@ -19,7 +19,19 @@ function App() {
     }, 1500);
   }
 
-  const toggleMode = ()=>{
+  const removeBodyClasses = ()=>{
+    document.body.classList.remove('bg-light');
+    document.body.classList.remove('bg-dark');
+    document.body.classList.remove('bg-danger');
+    document.body.classList.remove('bg-primary');
+    document.body.classList.remove('bg-success');
+    document.body.classList.remove('bg-warning');
+  }
+
+  const toggleMode = (cls)=>{
+    removeBodyClasses();
+    console.log(cls);
+    document.body.classList.add('bg-'+cls)
     if(mode === 'light'){
       setMode('dark');
       document.body.style.backgroundColor = '#31363F';
@@ -36,19 +48,19 @@ function App() {
   }
   return (
     <>
-    {/* <BrowserRouter> */}
+    <BrowserRouter>
       <Navbar title ="TextUtils" aboutText = "About TextUtils" mode ={mode} toggleMode = {toggleMode}/> 
     	<Alert alert = {alert}/>
       <div className="container my-4">
         {/* /users --> Component 1
         /usrers/home --> Component 2 */}
-      {/* <Routes> */}
-    		{/* <Route exact path='/about' element={<About mode={mode}/>}/>
-    		<Route exact path="/" element={<TextForm showAlert={showAlert} heading = "Enter the text to analyse"/>}></Route>	 */}
-        <TextForm showAlert={showAlert} heading = "Enter the text to analyse"/>
-    	{/* </Routes> */}
+      <Routes>
+    		<Route exact path='/about' element={<About mode={mode}/>}/>
+    		<Route exact path="/" element={<TextForm showAlert={showAlert} heading = "Enter the text to analyse"/>}></Route>	
+        {/* <TextForm showAlert={showAlert} heading = "Enter the text to analyse"/> */}
+      </Routes>
       </div>
-    {/* </BrowserRouter>     */}
+    </BrowserRouter>    
     </>
   );
 }
