@@ -58,6 +58,9 @@ The user interface of TextUtils is designed to be clean, intuitive, and user-fri
 - **API Integration**: Provide API endpoints for developers to integrate TextUtils functionalities into their own applications.
 - **Advanced Encryption Methods**: Implement more sophisticated encryption algorithms.
 - **Collaboration Features**: Enable multiple users to work on the same text document in real-time.
+- **Enhanced Text Encryption/Decryption**: Add more advanced and secure text encryption and decryption methods.
+- **Advanced Text Utilities**: Expand the range of text utilities to include features like text sorting, formatting for specific coding languages, and more complex find and replace options.
+- **Miscellaneous Tools Enhancements**: Include additional tools such as a text summarizer, grammar checker, and sentiment analysis.
 
 ## Conclusion
 
@@ -75,8 +78,8 @@ TextUtils aims to be the go-to solution for all text manipulation needs. By comb
 
 1. Clone the repository:
     ```bash
-    git clone https://github.com/yourusername/textutils.git
-    cd textutils
+    git clone https://github.com/mridulbirla13/TextUtils.git
+    cd TextUtils
     ```
 
 2. Install dependencies:
@@ -120,7 +123,7 @@ TextUtils is deployed using GitHub Pages. Follow these steps to deploy your own 
     npm run deploy
     ```
 
-Your application will be available at `https://yourusername.github.io/textutils`.
+Your application will be available at `https://mridulbirla13.github.io/TextUtils`.
 
 ### Contributing
 
