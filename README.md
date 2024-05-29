@@ -36,7 +36,7 @@ TextUtils is a versatile web application designed to provide users with a variet
 
 - **Frontend**: Developed using React for a responsive and interactive user interface. React enables efficient state management and dynamic rendering of the user interface components.
 - **Backend**: Powered by a lightweight server using Node.js and Express.js to handle text processing requests.
-- **Deployment**: Hosted on a cloud platform such as Heroku, AWS, or Azure for easy access and scalability.
+- **Deployment**: Hosted on GitHub Pages for easy access and scalability.
 
 ## User Interface
 
@@ -84,7 +84,7 @@ TextUtils aims to be the go-to solution for all text manipulation needs. By comb
     npm install
     ```
 
-### Running the Application
+### Running the Application Locally
 
 1. Start the development server:
     ```bash
@@ -95,7 +95,32 @@ TextUtils aims to be the go-to solution for all text manipulation needs. By comb
 
 ### Deployment
 
-Follow the instructions of your chosen cloud platform to deploy the application. Typically, you will need to build the project and then deploy the build directory.
+TextUtils is deployed using GitHub Pages. Follow these steps to deploy your own version:
+
+1. Build the project:
+    ```bash
+    npm run build
+    ```
+
+2. Install the `gh-pages` package:
+    ```bash
+    npm install --save-dev gh-pages
+    ```
+
+3. Add the following scripts to your `package.json` file:
+    ```json
+    "scripts": {
+      "predeploy": "npm run build",
+      "deploy": "gh-pages -d build"
+    }
+    ```
+
+4. Deploy the project:
+    ```bash
+    npm run deploy
+    ```
+
+Your application will be available at `https://yourusername.github.io/textutils`.
 
 ### Contributing
 
